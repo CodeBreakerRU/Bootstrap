@@ -6,7 +6,7 @@ function emptyCheck(name,id) {
  }else{
  id.style.backgroundColor = "";
  }
-} 
+}
 
 function nicValidation(nic,id) {
 
