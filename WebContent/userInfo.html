@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <title> Registation Form </title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,7 @@
 
 <div class="container">
  <h2> Registration Form </h2>
- <form action="">
+ <form>
  
  <div class="form-group">
  <label for="username">Username</label>
@@ -27,26 +27,27 @@
  
   <div class="form-group">
  <label for="nic">NIC:</label>
- <input type="text" class="form-control col-sm-6" id="nic" name="nic">
+ <input type="text" class="form-control col-sm-6" id="nic" name="nic" onchange="emptyCheck('nic',nic)" onclick="emptyCheck('nic',nic)" >
+     
  </div>
  
   
   <div class="form-group">
  <label for="mobile">Mobile:</label>
- <input type="number" class="form-control col-sm-6" id="phone" name="phone">
+ <input type="number" class="form-control col-sm-6" id="phone" name="phone" onchange="emptyCheck('phone',phone)" onclick="emptyCheck('phone',phone)">
  </div>
  
  <div class="form-group">
- <label for="pwd">Password:</label>
- <input type="password" class="form-control col-sm-6" id="pwd"  name="pwd">
+ <label for="password">Password:</label>
+ <input type="password" class="form-control col-sm-6" id="password"  name="password" >
  </div>
  
   <div class="form-group">
- <label for="pwd2">Password (Confirm):</label>
- <input type="password" class="form-control col-sm-6" id="pwd2"  name="pwd2">
+ <label for="password_confirm ">Password (Confirm):</label>
+ <input type="password" class="form-control col-sm-6" id="password_confirm "  name="password_confirm ">
  </div>
  
- <button type="submit" class="btn btn-info">Submit</button>
+ <button type="submit" class="btn btn-primary " action="post">Submit</button>
  </form>
 </div>
 <hr> 

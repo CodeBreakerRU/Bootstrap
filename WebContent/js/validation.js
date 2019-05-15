@@ -9,15 +9,28 @@ function emptyCheck(name,id) {
 } 
 
 function nicValidation(nic,id) {
+
 	 var regExpression = /^[0-9]{9}[vVxX]$/;
 	 if (!regExpression.test(nic)) {
+		 
 	 id.style.backgroundColor = "red";
 	 alert("Invalid NIC")
 	 }else{
 	 value.style.backgroundColor = "";
+	 
 	 }
 	} 
 
+
+function emailValidation(email, id) {
+	 var regExpression = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	 if (!regExpression.test(email)) {
+	 id.style.backgroundColor = "red";
+	 alert("Invalid E-mail")
+	 }else{
+	 value.style.backgroundColor = "";
+	 }
+	} 
 
 
 function mobileValidation(phone, id) {
@@ -38,6 +51,7 @@ function validateForm() {
 	 var mobile = document.getElementById('mobile');
 	 var password = document.getElementById('password');
 	 var password_confirm = document.getElementById('password_confirm');
+	 
 	 emailValidation(email.value, email)
 	 nicValidation(nic.value, nic)
 	 mobileValidation(mobile.value, mobile)
